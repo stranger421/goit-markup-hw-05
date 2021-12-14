@@ -64,8 +64,24 @@ header .logo {
   color: var(--active-color);
 }
 /*  */
+
+/* .links-nav { */
+/* display: inline-block; */
+/* position: relative; */
+/* } */
+
 .color-black {
   color: var(--main-color);
+}
+
+.active::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 32px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--active-color);
 }
 
 /* Контакти */
@@ -317,6 +333,35 @@ header .logo {
   margin-right: 30px;
 }
 
+.img-work-list {
+  display: block;
+}
+
+.image-wrap {
+  position: relative;
+}
+/* Позиционированик елементов */
+
+.descript {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+.descript-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 /* Наша команда */
 
 .our-comand {
@@ -338,7 +383,7 @@ header .logo {
 .comand-list-name {
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .employees {
@@ -638,7 +683,6 @@ footer .logo {
 }
 
 .portfolio-list {
-  /* padding-bottom: 94px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
