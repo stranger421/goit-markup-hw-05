@@ -743,7 +743,14 @@ footer .logo {
   align-items: center;
 }
 
-.portfolio-list-item:focus .portfolio-wraper,
-.portfolio-list-item:hover .portfolio-wraper {
+.portfolio-list-link:focus .portfolio-text-wraper,
+.portfolio-list-link:hover .portfolio-text-wraper {
   transform: translateY(0);
+  overflow: visible;
 }
+
+.img-portfolio-wraper {
+  display: block;
+}
+
+/*  */
