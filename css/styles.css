@@ -727,7 +727,7 @@ footer .logo {
 }
 .portfolio-text-wraper {
   position: absolute;
-  transform: translateY(100%);
+  transform: translateY(101%);
 
   font-size: 18px;
   width: 100%;
