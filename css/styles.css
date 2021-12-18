@@ -23,6 +23,7 @@ ul li {
   --sec-color: #757575;
   --active-color: #2196f3;
   --icon-color: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -95,6 +96,8 @@ header .logo {
   padding: 32px 0;
   display: inline-block;
   margin-right: 50px;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .links:last-child {
@@ -114,6 +117,8 @@ header .logo {
   letter-spacing: 0.02em;
   color: #757575;
   margin-right: 30px;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .link-header-root:focus,
@@ -220,13 +225,15 @@ header .logo {
   border-radius: 4px;
   margin: 0 auto;
   display: block;
-  background: var(--active-color);
+  background-color: var(--active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: #ffffff;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -423,6 +430,8 @@ header .logo {
   fill: #afb1b8;
   width: 44px;
   height: 44px;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .comand-social-link:hover,
@@ -445,6 +454,8 @@ header .logo {
   width: 20px;
   height: 20px;
   fill: var(--sec-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 /* Постоянные клиенты */
 .clients-list {
@@ -479,8 +490,8 @@ header .logo {
   border: 1px solid #afb1b8;
   background: #ffffff;
   fill: var(--icon-color);
-  transition-property: border, fill;
-  transition-duration: 250ms;
+
+  transition: fill 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 
 .client-icon:hover,
@@ -493,35 +504,6 @@ header .logo {
   fill: var(--icon-color);
 }
 
-.group1 {
-  width: 41px;
-  height: 47px;
-}
-
-.group2 {
-  width: 40px;
-  height: 52px;
-}
-
-.group3 {
-  width: 43px;
-  height: 41px;
-}
-
-.group4 {
-  width: 85px;
-  height: 41px;
-}
-
-.group5 {
-  width: 63px;
-  height: 45px;
-}
-
-.group6 {
-  width: 94px;
-  height: 44px;
-}
 /* Футер */
 
 .footer {
@@ -589,9 +571,10 @@ footer .logo {
   align-items: center;
   background-position: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   width: 44px;
   height: 44px;
+  transition: background-color 250ms var(--timing-function);
 }
 
 .icon-footer-link {
@@ -666,12 +649,14 @@ footer .logo {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  /* cursor: pointer; */
 
   border: none;
   box-shadow: none;
   border-radius: 4px;
   margin-right: 8px;
+
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .portfolio-button:hover,
@@ -700,6 +685,7 @@ footer .logo {
 }
 .portfolio-list-item {
   border: 1px solid #eeeeee;
+  transition: box-shadow 250ms var(--timing-function);
 }
 .possibilities {
   font-weight: bold;
@@ -728,6 +714,7 @@ footer .logo {
 .portfolio-text-wraper {
   position: absolute;
   transform: translateY(101%);
+  transition: transform 900ms var(--timing-function);
 
   font-size: 18px;
   width: 100%;
@@ -753,4 +740,62 @@ footer .logo {
   display: block;
 }
 
-/*  */
+/* Модальное окно */
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function);
+
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  padding: 0%;
+
+  width: 30px;
+  height: 30px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  bottom: 10px;
+  left: 10px;
+}

@@ -53,7 +53,7 @@
         <div class="hero-gradient">
             <section class="hero">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-btn">Заказать услугу</button>
+                <button data-modal-open type="button" class="hero-btn">Заказать услугу</button>
             </section>
         </div>
         <!-- Плюсы компнании -->
@@ -286,34 +286,34 @@
                 <ul class="clients-list">
                     <li class="item">
                         <a href="#" class="client-icon">
-                            <svg class="logo-icon group1">
-                                <use href="./images/symbol-defs.svg#icon-group1" width="41" height="47"></use>
+                            <svg width="41" height="47" class="logo-icon group1">
+                                <use href="./images/symbol-defs.svg#icon-group1" ></use>
                             </svg>
                         </a>
                     </li>
                     <li class="item"> <a href="#" class="client-icon">
-                        <svg class="logo-icon group2">
-                            <use href="./images/symbol-defs.svg#icon-group2" width="40" height="52"></use>
+                        <svg width="40" height="52" class="logo-icon group2">
+                            <use href="./images/symbol-defs.svg#icon-group2"></use>
                         </svg>
                     </a> </li>
                     <li class="item"> <a href="#" class="client-icon">
-                        <svg class="logo-icon group3">
-                            <use href="./images/symbol-defs.svg#icon-group3" width="43" height="41"></use>
+                        <svg width="43" height="41" class="logo-icon group3">
+                            <use href="./images/symbol-defs.svg#icon-group3"></use>
                         </svg>
                     </a> </li>
                     <li class="item"> <a href="#" class="client-icon">
-                        <svg class="logo-icon group4">
-                            <use href="./images/symbol-defs.svg#icon-group4" width="85" height="41"></use>
+                        <svg width="85" height="41" class="logo-icon group4">
+                            <use href="./images/symbol-defs.svg#icon-group4"></use>
                         </svg>
                     </a> </li>
                     <li class="item"> <a href="#" class="client-icon">
-                        <svg class="logo-icon group5">
-                            <use href="./images/symbol-defs.svg#icon-group5" width="63" height="45"></use>
+                        <svg width="63" height="45" class="logo-icon group5">
+                            <use href="./images/symbol-defs.svg#icon-group5"></use>
                         </svg>
                     </a> </li>
                     <li class="item"> <a href="#" class="client-icon">
-                        <svg class="logo-icon group6">
-                            <use href="./images/symbol-defs.svg#icon-group6" width="94" height="44"></use>
+                        <svg width="94" height="44" class="logo-icon group6">
+                            <use href="./images/symbol-defs.svg#icon-group6"></use>
                         </svg>
                     </a> </li>    
                 </ul>
@@ -373,6 +373,20 @@
             </div>
         </div>
     </footer>
+
+<!-- Модальное окно -->
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <p></p>
+            <button data-modal-close type="button" class="close-modal">
+                <svg width="11" height="11" class="close-modal-button">
+                    <use href="images/symbol-defs.svg#vector"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
 
