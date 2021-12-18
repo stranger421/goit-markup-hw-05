@@ -679,7 +679,7 @@ footer .logo {
   cursor: pointer;
 }
 /* Список возможностей */
-.portfolio-list-item:nth-child(-n + 6) {
+.portfolio-list-item:nth-child(-n + 7) {
   /* margin-right: 10px; */
   margin-bottom: 30px;
 }
@@ -714,7 +714,7 @@ footer .logo {
 .portfolio-text-wraper {
   position: absolute;
   transform: translateY(101%);
-  transition: transform 900ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 
   font-size: 18px;
   width: 100%;
@@ -786,7 +786,6 @@ footer .logo {
 
   width: 30px;
   height: 30px;
-
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
